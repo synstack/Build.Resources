@@ -1,10 +1,15 @@
 ﻿# NekoSpace.Build.Resources
 
-Embed lightweight JSON resources into your .NET application, instead of traditional .resx files.
+[![NuGet Version](https://img.shields.io/nuget/v/NekoSpace.Build.Resources.Json?label=NuGet)](https://www.nuget.org/packages/BingChat)
+![.NET Version](https://img.shields.io/badge/.NET-Standard_2.0-blue)
+[![License](https://img.shields.io/badge/License-MIT-lightblue)](./LICENSE)
+![Resource](https://img.shields.io/badge/Resource-JSON-wheat)
+
+Embed lightweight JSON resources into your .NET application using MSBuild Task, instead of traditional .resx files.
 
 ## Features
 
-- Parse and embed JSON resource into assembly using MSBuild Task, results the same functionality as ResX.
+- Compile JSON resources to binary .resources files, and embed them into assembly, results the same functionality as ResX.
 - Cleaner, more human-readable content compared to ResX, even outside IDEs. (Without IDEs the .resx file is totally a mess)
 - Easy to use. Just a few lines to include all JSON resources, so you won't mess up your project file.
 - Support nested JSON structures.
@@ -22,7 +27,7 @@ Then, add a single line to your csproj file:
 ```xml
 <ItemGroup>
     <!-- Embed our JSON resources. -->
-    <JsonResource Include="**\*.json" Exclude="bin\**\*; obj\**\*" />
+    <JsonResource Include="**\*.json" Exclude="bin\**\*; obj\**\*"/>
 </ItemGroup>
 ```
 
@@ -70,7 +75,8 @@ Then get the resource string by passing a specified culture:
 Console.WriteLine(manager.GetString("ExampleKey", new CultureInfo("zh-Hans")));
 ```
 
-You can find more examples [in the examples folder](./examples).
+You can find more examples [in the examples folder](./examples), such as combining usage with
+[Microsoft.Extensions.Localization](https://learn.microsoft.com/dotnet/core/extensions/localization).
 
 ## License
 

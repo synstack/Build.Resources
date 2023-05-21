@@ -1,0 +1,6 @@
+﻿{
+  "Message": "Ah woo woo",
+  "Nested": {
+    "Message": "Woo ah ah {0}"
+  }
+}
