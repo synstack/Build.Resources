@@ -1,15 +1,15 @@
-﻿## NekoSpace.Build.Resources
+﻿# NekoSpace.Build.Resources
 
 Embed lightweight JSON resources into your .NET application, instead of traditional .resx files.
 
-### Features
+## Features
 
 - Parse and embed JSON resource into assembly using MSBuild Task, results the same functionality as ResX.
 - Cleaner, more human-readable content compared to ResX, even outside IDEs. (Without IDEs the .resx file is totally a mess)
 - Easy to use. Just a few lines to include all JSON resources, so you won't mess up your project file.
 - Support nested JSON structures.
 
-### Getting Started
+## Getting Started
 
 First install this package using package manager or using dotnet CLI:
 
