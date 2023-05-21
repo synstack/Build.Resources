@@ -43,8 +43,9 @@ namespace NekoSpace.Build.Resources.Json
 
                     var resFilename = $"{filenameWithCulture}.resources";
                     var resLogicalName = GetResourceLogicalName(inputItem.ItemSpec, resFilename);
+                    var resOutputPath = Path.Combine(OutputPath, resLogicalName);
 
-                    var writer = new ResourceWriter(Path.Combine(OutputPath, resLogicalName));
+                    var writer = new ResourceWriter(resOutputPath);
 
                     var ok = true;
 
@@ -93,7 +94,7 @@ namespace NekoSpace.Build.Resources.Json
                     // Copy all the input metadata to output
                     inputItem.CopyMetadataTo(outputItem);
 
-                    outputItem.ItemSpec = resLogicalName;
+                    outputItem.ItemSpec = resOutputPath;
 
                     _outputResources.Add(outputItem);
                 }
