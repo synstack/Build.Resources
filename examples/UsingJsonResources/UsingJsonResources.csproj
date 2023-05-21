@@ -13,7 +13,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="NekoSpace.Build.Resources.Json" Version="1.0.0">
+      <PackageReference Include="NekoSpace.Build.Resources.Json" Version="1.0.3">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
