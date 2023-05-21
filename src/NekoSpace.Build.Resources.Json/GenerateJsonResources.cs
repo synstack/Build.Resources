@@ -42,9 +42,9 @@ namespace NekoSpace.Build.Resources.Json
                     var filenameWithCulture = Path.GetFileNameWithoutExtension(inputItem.ItemSpec);
 
                     var resFilename = $"{filenameWithCulture}.resources";
+                    var resLogicalName = GetResourceLogicalName(inputItem.ItemSpec, resFilename);
 
-                    var resOutputPath = Path.Combine(OutputPath, resFilename);
-                    var writer = new ResourceWriter(resOutputPath);
+                    var writer = new ResourceWriter(resLogicalName);
 
                     var ok = true;
 
@@ -88,12 +88,12 @@ namespace NekoSpace.Build.Resources.Json
                     // After correction, the metadata resource name will be:
                     //   "UsingJsonResource.Resources.ExampleResource.resource"
                     // That's the default behavior of .resx files.
-                    outputItem.SetMetadata("LogicalName", GetResourceLogicalName(inputItem.ItemSpec, resFilename));
+                    outputItem.SetMetadata("LogicalName", resLogicalName);
 
                     // Copy all the input metadata to output
                     inputItem.CopyMetadataTo(outputItem);
 
-                    outputItem.ItemSpec = resOutputPath;
+                    outputItem.ItemSpec = resLogicalName;
 
                     _outputResources.Add(outputItem);
                 }
