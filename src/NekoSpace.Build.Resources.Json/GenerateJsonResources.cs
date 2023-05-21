@@ -44,7 +44,7 @@ namespace NekoSpace.Build.Resources.Json
                     var resFilename = $"{filenameWithCulture}.resources";
                     var resLogicalName = GetResourceLogicalName(inputItem.ItemSpec, resFilename);
 
-                    var writer = new ResourceWriter(resLogicalName);
+                    var writer = new ResourceWriter(Path.Combine(OutputPath, resLogicalName));
 
                     var ok = true;
 

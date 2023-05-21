@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <PackageId>NekoSpace.Build.Resources.Json</PackageId>
-        <PackageVersion>1.0.1</PackageVersion>
+        <PackageVersion>1.0.2</PackageVersion>
         <Description>Embed JSON resources into your .NET application.</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <Authors>bsdayo</Authors>
