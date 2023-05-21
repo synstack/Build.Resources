@@ -58,6 +58,8 @@ Console.WriteLine(manager.GetString("ExampleKey"));
 Console.WriteLine(manager.GetString("Group:ExampleSubKey"));
 ```
 
+## Localization
+
 Same as ResX, our resources can be easily localized!
 
 Create another JSON file called `ExampleResource.zh-Hans.json`:
