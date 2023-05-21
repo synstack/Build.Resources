@@ -1,0 +1,7 @@
+﻿<Project>
+    <PropertyGroup>
+        <JsonResourcesTaskAssembly>$(MSBuildThisFileDirectory)..\tasks\netstandard2.0\$(MSBuildThisFileName).dll</JsonResourcesTaskAssembly>
+    </PropertyGroup>
+
+    <UsingTask TaskName="$(MSBuildThisFileName).GenerateJsonResources" AssemblyFile="$(JsonResourcesTaskAssembly)"/>
+</Project>

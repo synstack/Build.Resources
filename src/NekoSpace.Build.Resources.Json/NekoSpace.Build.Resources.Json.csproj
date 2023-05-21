@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <PackageId>NekoSpace.Build.Resources.Json</PackageId>
+        <PackageVersion>1.0.0</PackageVersion>
+        <Description>Embed JSON resources into your .NET application.</Description>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <Authors>bsdayo</Authors>
+
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <BuildOutputTargetFolder>tasks</BuildOutputTargetFolder>
+        <NoPackageAnalysis>true</NoPackageAnalysis>
+        <DevelopmentDependency>true</DevelopmentDependency>
+
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/NekoSpace/NekoSpace.Build.Resources.git</RepositoryUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Content Include="NekoSpace.Build.Resources.Json.props" PackagePath="build"/>
+        <Content Include="NekoSpace.Build.Resources.Json.targets" PackagePath="build"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Build.Framework" Version="17.6.3" PrivateAssets="all"/>
+        <PackageReference Include="Microsoft.Build.Utilities.Core" Version="17.6.3" PrivateAssets="all"/>
+        <PackageReference Include="System.Text.Json" Version="7.0.2" PrivateAssets="all"/>
+    </ItemGroup>
+
+</Project>

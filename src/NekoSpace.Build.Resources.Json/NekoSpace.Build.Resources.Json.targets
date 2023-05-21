@@ -1,0 +1,15 @@
+﻿<Project>
+    <Target Name="GenerateJsonResources" BeforeTargets="BeforeBuild" Condition="@(JsonResource) != ''">
+        <GenerateJsonResources
+                Sources="@(JsonResource)"
+                OutputPath="$(IntermediateOutputPath)Resources"
+                ProjectRootNamespace="$(RootNamespace)"
+        >
+            <Output TaskParameter="OutputResources" ItemName="_BinaryResourcesFile"/>
+        </GenerateJsonResources>
+
+        <ItemGroup>
+            <EmbeddedResource Include="@(_BinaryResourcesFile)"/>
+        </ItemGroup>
+    </Target>
+</Project>
